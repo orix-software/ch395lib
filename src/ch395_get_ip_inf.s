@@ -15,7 +15,6 @@
     ;;@```ca65
     ;;@`  lda  #<ip_address
     ;;@`  ldx  #>ip_address
-    ;;@`  ldx  #$00
     ;;@`  jsr  ch395_get_ip_inf
     ;;@`  rts
     ;;@`ip_address:
@@ -23,7 +22,7 @@
     ;;@```
 
     sta     RES
-    stx     RES+1
+    stx     RES + 1
 
 	lda     #CH395_GET_IP_INF
     sta     CH395_COMMAND_PORT

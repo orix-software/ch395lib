@@ -8,7 +8,7 @@
     ;;@inputA Socket ID
     ;;@inputY Low length
     ;;@inputX High length
-    ;;@inputMEM Ptr of the data to send
+    ;;@inputMEM_RES Ptr of the data to send
     ;;@inputMEM_RESB Adress ptr to read
     ;;@modifyMEM_RES Tmp
     ;;@```ca65
@@ -22,7 +22,7 @@
     ;;@```
 
     sty     RESB     ; Save low length
-    stx     RESB+1   ; Save high length
+    stx     RESB + 1   ; Save high length
 
     ; A contains Socket
 
@@ -36,7 +36,7 @@ entry_point_c:
     stx     CH395_DATA_PORT ; set length high
 
 
-    ldx     RESB+1 ; High byte equal to 0 ?
+    ldx     RESB + 1 ; High byte equal to 0 ?
     beq     @decrement  ; Yes only dec Low byte
 
 @restart:
@@ -49,7 +49,7 @@ entry_point_c:
     iny
     bne     @loop
     inx
-    cpx     RESB+1
+    cpx     RESB + 1
     bne     @loop
 
 

@@ -23,7 +23,7 @@
     ;;@```
 
     sty     RES
-    stx     RES+1
+    stx     RES + 1
 
 enter_c_proto:
     ldy     #CH395_GET_REMOT_IPP_SN

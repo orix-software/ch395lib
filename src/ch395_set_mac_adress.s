@@ -13,7 +13,7 @@
     ldy     #CH395_SET_MAC_ADDR
     sty     CH395_COMMAND_PORT
     sta     RES
-    stx     RES+1
+    stx     RES + 1
 
     ldy     #$00
 

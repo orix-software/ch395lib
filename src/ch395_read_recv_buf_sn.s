@@ -11,7 +11,7 @@
     ;;@inputMEM_RES ptr to fill
     ;;@modifyMEM_RESB tmp value
     sty     RESB        ; Save length
-    stx     RESB+1
+    stx     RESB + 1
 
     ldy     #CH395_READ_RECV_BUF_SN
     sty     CH395_COMMAND_PORT
@@ -21,7 +21,7 @@
     sta     CH395_DATA_PORT ; set length
     stx     CH395_DATA_PORT ; set length to receive
 
-    lda     RESB+1
+    lda     RESB + 1
     beq     @decrement
 
     ldy     #$00
@@ -32,7 +32,7 @@
     sta     (RES),y
     iny
     bne     @loop2
-    inc     RES+1
+    inc     RES + 1
     inx
     cpx     RESB+1
     bne     @loop2

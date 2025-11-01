@@ -25,7 +25,7 @@
     ;;@```
 
     sta     RES
-    stx     RES+1
+    stx     RES + 1
 	lda     #CH395_GET_MAC_ADDR
     sta     CH395_COMMAND_PORT
 

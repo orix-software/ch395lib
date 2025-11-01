@@ -11,7 +11,7 @@
     ;;@modifyMEM_RES tmp
 
     sty     RES
-    stx     RES+1
+    stx     RES + 1
 
     ldx     #CH395_SET_IP_ADDR_SN
     stx     CH395_COMMAND_PORT
